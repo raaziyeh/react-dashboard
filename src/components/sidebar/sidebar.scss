@@ -1,0 +1,83 @@
+@import "../../scss/mixins";
+@import "../../scss/variables.scss";
+
+.sidebar {
+	flex: 1;
+	border-right: 0.5px solid $gray-lighter-2;
+    min-height: 100vh;
+    background-color: white;
+	.top {
+		height: 50px;
+		@include flex-center;
+
+		.logo {
+			font-size: 20px;
+			font-weight: bold;
+			color: $purple;
+		}
+	}
+
+	hr {
+		height: 0;
+		border: 0.5px solid $gray-lighter-2;
+	}
+
+    .center {
+        padding: 10px;
+        ul {          
+            list-style: none;
+        }
+		.title {
+			font-size: 10px;
+			font-weight: bold;
+			color: $gray-lighter-1;
+			margin-top: 15px;
+			margin-bottom: 5px;
+		}
+		li {
+			display: flex;
+			align-items: center;
+			padding: 5px;
+			cursor: pointer;
+			&:hover {
+				background-color: $purple-lighter-2;
+			}
+
+			.icon {
+				font-size: 18px;
+				color: $purple-lighter-1;
+			}
+
+			span {
+				font-size: 13px;
+				font-weight: 600;
+				margin-left: 10px;
+				color:$gray;
+			}
+		}
+    }
+
+	.bottom {
+		display: flex;
+		align-items: center;
+		margin: 10px;
+
+		.color-option {
+			width: 20px;
+			height: 20px;
+			border-radius: 5px;
+			border: 1px solid $purple-lighter-1;
+			margin: 5px;
+			cursor: pointer;
+
+			&:nth-child(1) {
+				background-color: whitesmoke;
+			}
+			&:nth-child(2) {
+				background-color: #333;
+			}
+		}
+
+
+	}
+}
