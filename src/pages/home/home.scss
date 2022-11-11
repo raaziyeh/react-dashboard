@@ -1,6 +1,13 @@
 .home {
-    display: flex;
-    .home-container {
-        flex: 6;
-    }
+	display: flex;
+	.home-container {
+		flex: 6;
+
+		.widgets {
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+	}
 }

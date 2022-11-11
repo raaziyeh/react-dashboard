@@ -6,6 +6,7 @@
 	border-right: 0.5px solid $gray-lighter-2;
     min-height: 100vh;
     background-color: white;
+
 	.top {
 		height: 50px;
 		@include flex-center;
@@ -23,7 +24,7 @@
 	}
 
     .center {
-        padding: 10px;
+        padding-left: 10px;
         ul {          
             list-style: none;
         }

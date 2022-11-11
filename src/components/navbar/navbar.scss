@@ -3,13 +3,13 @@
 .navbar {
 	display: flex;
 	align-items: center;
-	padding: 20px;
 	height: 50px;
 	font-size: 14px;
 	color: #555;
 	border-bottom: 0.5px solid $gray-lighter-2;
 
 	.wrapper {
+		padding: 20px;
 		width: 100%;
 		display: flex;
 		align-items: center;
@@ -19,12 +19,13 @@
 			display: flex;
 			align-items: center;
 			border: 0.5px solid lightgrey;
-			padding: 3px;
+			padding: 4px;
 
 			input {
 				border: none;
 				outline: none;
 				background: transparent;
+
 				&::placeholder {
 					font-size: 12px;
 				}
@@ -49,7 +50,7 @@
 					width: 30px;
 					height: 30px;
 					border-radius: 50%;
-                    object-fit: cover;
+					object-fit: cover;
 				}
 
 				.counter {
