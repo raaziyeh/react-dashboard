@@ -1,0 +1,85 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+
+.progress {
+	width: 100%;
+	flex: 1;
+	margin-right: 20px;
+	@include box-shadow;
+	padding: 10px;
+
+	.top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: gray;
+		font-size: 16px;
+
+		.icon {
+			font-size: 20px;
+		}
+	}
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+
+        .circular {
+            margin-top: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .total {
+            color: gray;
+            font-size: 16px;
+        }
+
+        .sales {
+            font-size: 30px;            
+        }
+
+        .message {
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 300;
+            color: $gray-lighter-1;
+        }
+    }
+
+	.bottom {
+        margin-top: 15px;
+        margin-bottom: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.stats {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:10px;
+			font-size: 14px;
+			color: $gray;
+
+            .details {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.positive {
+                    color: green;
+                }
+
+                &.negative{
+                    color: red;
+                }
+            }
+		}
+	}
+}

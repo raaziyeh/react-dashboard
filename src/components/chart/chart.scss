@@ -1,0 +1,13 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+
+.chart {
+	@include box-shadow;
+	flex: 2;
+	padding: 10px;
+
+	.top {
+		color: gray;
+		font-size: 16px;
+	}
+}

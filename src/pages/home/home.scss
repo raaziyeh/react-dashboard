@@ -1,3 +1,5 @@
+@import "../../scss/mixins.scss";
+
 .home {
 	display: flex;
 	.home-container {
@@ -8,6 +10,22 @@
 			display: flex;
 			align-items: center;
 			gap: 20px;
+		}
+
+		.stats-wrapper {
+			display: flex;
+			padding: 20px;			
+		}
+
+		.list-wrapper {
+			margin: 20px;
+			padding: 20px;
+			@include box-shadow;
+			
+			.title {
+				color: gray;
+				margin-bottom: 15px;
+			}
 		}
 	}
 }
