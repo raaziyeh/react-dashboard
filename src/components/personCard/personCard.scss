@@ -1,0 +1,66 @@
+@import "../../scss/variables.scss";
+
+.person-card {
+	padding: 20px;
+	position: relative;
+
+	.person-card-edit {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 5px;
+		font-size: 12px;
+		color: $purple-lighter-1;
+		background-color: $purple-lighter-2;
+		border-bottom-left-radius: 5px;
+		cursor: pointer;
+	}
+
+	.person-card-title {
+		color: rgba(128, 128, 128, 0.415);
+		font-weight: 700;
+	}
+
+	.card-details {
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-between;
+		grid-template: 10px;
+
+		.img {
+			flex: 1;
+			img {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin-right: 5px;
+			}
+		}
+
+		.information {
+			flex: 2;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			h2 {
+				color: rgb(109, 107, 107);
+				font-size: 30px;
+				margin-bottom: 10px;
+			}
+
+			.info-item {
+				margin-bottom: 10px;
+				font-weight: 300;
+				font-size: 14px;
+
+				span {
+					color: gray;
+					font-size: 14px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
