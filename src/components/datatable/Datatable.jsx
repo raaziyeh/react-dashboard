@@ -1,8 +1,19 @@
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid"
 import { userColumns, userRows } from "../../dataTableSource"
+import { Link } from "react-router-dom"
 import "./datatable.scss"
 
-const Datatable = () => {
+const Datatable = (props) => {
+	let title, newPath
+
+	if (props.type === "user") {
+		title = "Users List"
+		newPath = "/users/new"
+	} else if (props.type === "product") {
+		title = "Products List"
+		newPath = "/products/new"
+	}
+
 	const actionColumn = [
 		{
 			field: "action",
@@ -11,7 +22,9 @@ const Datatable = () => {
 			renderCell: () => {
 				return (
 					<div className="action-cell">
-						<button className="view-btn">View</button>
+						<Link to="/users/test">
+							<button className="view-btn">View</button>
+						</Link>
 						<button className="del-btn">Delete</button>
 					</div>
 				)
@@ -22,15 +35,23 @@ const Datatable = () => {
 	const rows = userRows
 
 	return (
-		<div className="data-table">
-			<DataGrid
-				rows={rows}
-				columns={columns}
-				pageSize={8}
-				rowsPerPageOptions={[8]}
-				checkboxSelection
-			/>
-		</div>
+		<>
+			<div className="new-item-container">
+				<div className="new-item">
+					<span>{title}</span>
+					<Link to={newPath}> Add New </Link>
+				</div>
+			</div>
+			<div className="data-table">
+				<DataGrid
+					rows={rows}
+					columns={columns}
+					pageSize={8}
+					rowsPerPageOptions={[8]}
+					checkboxSelection
+				/>
+			</div>
+		</>
 	)
 }
 

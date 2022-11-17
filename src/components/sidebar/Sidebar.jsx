@@ -9,14 +9,17 @@ import MonitorHeartOutlinedIcon from "@mui/icons-material/MonitorHeartOutlined"
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined"
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined"
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined"
-import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
+import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined"
+import { Link } from "react-router-dom"
 import "./sidebar.scss"
 
 const Sidebar = () => {
 	return (
 		<div className="sidebar">
 			<div className="top">
-				<span className="logo">LOGO</span>
+				<Link to="/">
+					<span className="logo">LOGO</span>
+				</Link>
 			</div>
 			<hr />
 			<div className="center">
@@ -28,12 +31,16 @@ const Sidebar = () => {
 					</li>
 					<p className="title">LISTS</p>
 					<li>
-						<GroupOutlinedIcon className="icon" />
-						<span>Users</span>
+						<Link to="/users">
+							<GroupOutlinedIcon className="icon" />
+							<span>Users</span>
+						</Link>
 					</li>
 					<li>
-						<Inventory2OutlinedIcon className="icon" />
-						<span>Products</span>
+						<Link to="/products">
+							<Inventory2OutlinedIcon className="icon" />
+							<span>Products</span>
+						</Link>
 					</li>
 					<li>
 						<ViewStreamOutlinedIcon className="icon" />
@@ -77,9 +84,9 @@ const Sidebar = () => {
 				</ul>
 			</div>
 			<div className="bottom">
-                <div className="color-option"></div>
-                <div className="color-option"></div>
-            </div>
+				<div className="color-option"></div>
+				<div className="color-option"></div>
+			</div>
 		</div>
 	)
 }
