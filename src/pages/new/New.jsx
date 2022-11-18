@@ -29,6 +29,7 @@ const New = (props) => {
 				<div className="bottom">
 					<div className="left">
 						<img
+							alt=""
 							src={
 								imgFile
 									? URL.createObjectURL(imgFile)
@@ -70,7 +71,5 @@ const New = (props) => {
 		</div>
 	)
 }
-
-const g = 4
 
 export default New

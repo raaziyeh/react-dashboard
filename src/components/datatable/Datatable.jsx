@@ -1,4 +1,4 @@
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid"
+import { DataGrid, GridColDef } from "@mui/x-data-grid"
 import { userColumns, userRows } from "../../dataTableSource"
 import { Link } from "react-router-dom"
 import "./datatable.scss"
@@ -44,6 +44,7 @@ const Datatable = (props) => {
 			</div>
 			<div className="data-table">
 				<DataGrid
+					className="data-grid"
 					rows={rows}
 					columns={columns}
 					pageSize={8}
