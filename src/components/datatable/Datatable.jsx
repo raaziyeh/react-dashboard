@@ -1,9 +1,11 @@
 import { DataGrid, GridColDef } from "@mui/x-data-grid"
-import { userColumns, userRows } from "../../dataTableSource"
+import { userColumns, userRows } from "./dataTableSource"
 import { Link } from "react-router-dom"
+import { useState } from "react"
 import "./datatable.scss"
 
 const Datatable = (props) => {
+	const [rows, setRows] = useState(userRows)
 	let title, newPath
 
 	if (props.type === "user") {
@@ -19,21 +21,22 @@ const Datatable = (props) => {
 			field: "action",
 			headerName: "Action",
 			width: 200,
-			renderCell: () => {
+			renderCell: (params) => {
 				return (
 					<div className="action-cell">
 						<Link to="/users/test">
 							<button className="view-btn">View</button>
 						</Link>
-						<button className="del-btn">Delete</button>
+						<button className="del-btn" onClick={() => {
+							setRows(rows => rows.filter(row => row.id !== params.row.id))
+						}}>Delete</button>
 					</div>
 				)
 			},
 		},
 	]
 	const columns: GridColDef[] = userColumns.concat(actionColumn)
-	const rows = userRows
-
+	
 	return (
 		<>
 			<div className="new-item-container">
