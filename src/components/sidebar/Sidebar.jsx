@@ -19,13 +19,13 @@ const Sidebar = () => {
 	const { dispatch } = useContext(DarkModeContext)
 	return (
 		<div className="sidebar">
-			<div className="top">
+			<div className="logo-wrapper">
 				<Link to="/">
 					<span className="logo">LOGO</span>
 				</Link>
 			</div>
 			<hr />
-			<div className="center">
+			<div className="sidebar-nav">
 				<ul>
 					<p className="title">MAIN</p>
 					<Link to="/">
@@ -88,16 +88,16 @@ const Sidebar = () => {
 						<span>Logout</span>
 					</li>
 				</ul>
-			</div>
-			<div className="bottom">
-				<div
-					className="color-option"
-					onClick={() => dispatch({ type: "light" })}
-				></div>
-				<div
-					className="color-option"
-					onClick={() => dispatch({ type: "dark" })}
-				></div>
+				<div className="bottom-of-center">
+					<div
+						className="color-option"
+						onClick={() => dispatch({ type: "light" })}
+					></div>
+					<div
+						className="color-option"
+						onClick={() => dispatch({ type: "dark" })}
+					></div>
+				</div>
 			</div>
 		</div>
 	)
