@@ -91,3 +91,11 @@
 		}
 	}
 }
+
+@media (max-width: 800px) {
+	.new {
+		.new-container {
+			flex: 12;
+		}
+	}
+}

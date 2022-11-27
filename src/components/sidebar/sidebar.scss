@@ -14,10 +14,21 @@
 		z-index: 100;
 		background-color: white;
 		height: 50px;
-		@include flex-center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.more-icon {
+			display: none;
+			color: gray;
+			margin-right: 10px;
+			&:hover {
+				cursor: pointer;
+			}
+		}
 
 		.logo {
-			font-size: 20px;
+			font-size: 22px;
 			font-weight: bold;
 			color: $purple;
 		}
@@ -89,6 +100,40 @@
 				&:nth-child(2) {
 					background-color: #333;
 				}
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.sidebar {
+		border: none;
+		display: none;
+
+		.logo-wrapper {
+			justify-content: flex-start;
+			.more-icon {
+				display: inline !important;
+
+				&:hover{
+					.sidebar-nav {
+						background-color: aqua!important;
+					}
+				}
+			}
+
+			.logo {
+				font-size: 16px !important;
+			}
+		}
+
+		.sidebar-nav {
+			@include box-shadow;
+			.bottom-of-center {
+				flex-direction: column;
+				margin: 0 !important;
+				align-items: flex-start !important;
+				justify-content: flex-start !important;
 			}
 		}
 	}

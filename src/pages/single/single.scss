@@ -45,3 +45,11 @@
 		}
 	}
 }
+
+@media (max-width: 800px) {
+	.single {
+		.single-container {
+			flex: 12;
+		}
+	}
+}

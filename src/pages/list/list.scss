@@ -6,3 +6,11 @@
 		flex: 6;
 	}
 }
+
+@media (max-width: 800px) {
+	.list {
+		.list-container {
+			flex: 12;
+		}
+	}
+}
